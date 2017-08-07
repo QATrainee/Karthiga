@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 1, Errors: 0, Skipped: 2, Time elapsed: 288.127 s <<< FAILURE! - in TestSuite
+f(finalTest.FinalTest)  Time elapsed: 288.082 s  <<< FAILURE!
+java.lang.NullPointerException
+	at finalTest.FinalTest.f(FinalTest.java:13)
+
