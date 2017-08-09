@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 1, Errors: 0, Skipped: 2, Time elapsed: 288.127 s <<< FAILURE! - in TestSuite
-f(finalTest.FinalTest)  Time elapsed: 288.082 s  <<< FAILURE!
-java.lang.NullPointerException
+Tests run: 3, Failures: 1, Errors: 0, Skipped: 2, Time elapsed: 5.479 s <<< FAILURE! - in TestSuite
+f(finalTest.FinalTest)  Time elapsed: 5.402 s  <<< FAILURE!
+java.io.FileNotFoundException: D:\Sys1\workspace\Final.automation\src\finalTest\Base.properties (The system cannot find the path specified)
 	at finalTest.FinalTest.f(FinalTest.java:13)
 

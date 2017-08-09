@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="8" passed="8">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="366016" started-at="2017-08-08T06:51:55Z" finished-at="2017-08-08T06:58:01Z">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="366016" started-at="2017-08-08T06:51:55Z" finished-at="2017-08-08T06:58:01Z">
+      <class name="techfetch.Techfetch2">
+        <test-method status="PASS" signature="login()[pri:0, instance:techfetch.Techfetch2@13c78c0b]" name="login" duration-ms="40170" started-at="2017-08-08T12:21:55Z" finished-at="2017-08-08T12:22:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="upload()[pri:0, instance:techfetch.Techfetch2@13c78c0b]" name="upload" duration-ms="43477" started-at="2017-08-08T12:22:35Z" depends-on-methods="techfetch.Techfetch2.login" finished-at="2017-08-08T12:23:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- upload -->
+        <test-method status="PASS" signature="forward()[pri:0, instance:techfetch.Techfetch2@13c78c0b]" name="forward" duration-ms="46241" started-at="2017-08-08T12:23:19Z" depends-on-methods="techfetch.Techfetch2.upload" finished-at="2017-08-08T12:24:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- forward -->
+        <test-method status="PASS" signature="update()[pri:0, instance:techfetch.Techfetch2@13c78c0b]" name="update" duration-ms="103203" started-at="2017-08-08T12:24:05Z" depends-on-methods="techfetch.Techfetch2.forward" finished-at="2017-08-08T12:25:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- update -->
+        <test-method status="PASS" signature="fetch()[pri:0, instance:techfetch.Techfetch2@13c78c0b]" name="fetch" duration-ms="28213" started-at="2017-08-08T12:25:48Z" depends-on-methods="techfetch.Techfetch2.update" finished-at="2017-08-08T12:26:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- fetch -->
+        <test-method status="PASS" signature="listing()[pri:0, instance:techfetch.Techfetch2@13c78c0b]" name="listing" duration-ms="39233" started-at="2017-08-08T12:26:17Z" depends-on-methods="techfetch.Techfetch2.fetch" finished-at="2017-08-08T12:26:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- listing -->
+        <test-method status="PASS" signature="features()[pri:0, instance:techfetch.Techfetch2@13c78c0b]" name="features" duration-ms="31508" started-at="2017-08-08T12:26:56Z" depends-on-methods="techfetch.Techfetch2.listing" finished-at="2017-08-08T12:27:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- features -->
+        <test-method status="PASS" signature="logout()[pri:0, instance:techfetch.Techfetch2@13c78c0b]" name="logout" duration-ms="33957" started-at="2017-08-08T12:27:27Z" depends-on-methods="techfetch.Techfetch2.features" finished-at="2017-08-08T12:28:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logout -->
+      </class> <!-- techfetch.Techfetch2 -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
