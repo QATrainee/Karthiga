@@ -49,9 +49,6 @@ public class Travels
             	sel.selectByIndex(1);
             	driver.findElement(By.xpath(".//*[@id='HOTELS']/div/form/div[6]/div/button")).click();
             	 Thread.sleep(1000);
-            } 
-          
-           
-      
+            }
 	 }
 }
