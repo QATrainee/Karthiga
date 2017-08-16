@@ -18,7 +18,7 @@ public class Travels
 	        driver.manage().window().maximize();
 	        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	        driver.get("http://www.phptravels.net");
-	        Thread.sleep(1000);
+	      Thread.sleep(1000);
 	  // String xp =".select2-chosen";
             WebElement city = driver.findElement(By.cssSelector(".select2-chosen"));
             city.click();
@@ -29,14 +29,28 @@ public class Travels
             action.moveToElement(city).perform();
             driver.findElement(By.xpath(".//*[@id='select2-drop']/ul/li/ul/li[1]/div")).click();
             Thread.sleep(1000);
+            
+            
    //select date 
-            driver.findElement(By.xpath(".//*[@id='dpd1']/div/input")).click();
+           WebElement day =  driver.findElement(By.xpath(".//*[@id='dpd1']/div/input"));
+           day.click();
+          // driver.findElement(By.xpath("html/body/div[14]")).click();
             Thread.sleep(1000);
-            driver.findElement(By.xpath("html/body/div[14]/div[1]/table/tbody/tr[3]/td[6]")).click();
+            Actions actions = new Actions(driver);
+            actions.moveToElement(day).perform();
+            driver.findElement(By.xpath("html/body/div[14]/div[1]/table/tbody/tr[4]/td[3]")).click();
             Thread.sleep(1000);
-     // driver.findElement(By.xpath(".//*[@id='dpd2']/div/input")).click();
-     //  Thread.sleep(1000);
-            driver.findElement(By.xpath("html/body/div[15]/div[1]/table/tbody/tr[4]/td[6]")).click();
+            WebElement day1 = driver.findElement(By.xpath(".//*[@id='dpd2']/div/input"));
+            day1.click();
+            Actions actioned = new Actions(driver);
+            actioned.moveToElement(day1).perform();
+            
+      driver.findElement(By.xpath("html/body/div[14]/div[1]/table/thead/tr[1]/th[3]")).click();
+     Thread.sleep(1000);
+     
+     
+     
+            driver.findElement(By.xpath("html/body/div[14]/div[1]/table/tbody/tr[3]/td[3]")).click();
             Thread.sleep(3000);
             Select select = new Select(driver.findElement(By.xpath(".//*[@id='adults']")));
             List <WebElement> l = select.getOptions();
@@ -59,4 +73,7 @@ public class Travels
             	driver.findElement(By.xpath(".//*[@id='OVERVIEW']/div/div[2]/div[1]/div[3]/div[2]/div/div[1]/div[3]")).click();
             }
 	 }
-}
+}     
+	        
+	        
+	        
