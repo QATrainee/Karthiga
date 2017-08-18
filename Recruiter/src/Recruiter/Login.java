@@ -5,6 +5,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.List;
 import java.util.Properties;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -16,11 +17,16 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
 public class Login {
+	public static String workingDir;
     public static void main(String[] args) throws InterruptedException, IOException {
-        WebDriver driver;
-        System.setProperty("webdriver.chrome.driver", "C:\\Program Files\\Java\\jdk1.8.0_121\\chromedriver.exe");
-        driver = new ChromeDriver();
-        File file = new File("D:\\Sys1\\workspace\\Recruiter\\rec.properties");
+    	WebDriver driver;
+    	workingDir = System.getProperty("user.dir");
+		// BasicConfigurator.configure();
+		System.setProperty("webdriver.chrome.driver",workingDir+ "\\Resources\\chromedriver.exe");
+		driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		File file = new File(workingDir + "\\Resources\\rec.properties");
 		FileInputStream fileInput;
 		fileInput = new FileInputStream(file);
 		Properties prop = new Properties();
@@ -33,8 +39,8 @@ public class Login {
         driver.findElement(By.xpath(".//*[@id='emploginpop']")).click();
         driver.switchTo().defaultContent();
         driver.switchTo().frame("empcontentframe");
-        driver.findElement(By.xpath(".//*[@id='txtemailid']")).sendKeys(prop.getProperty("id"));
-        driver.findElement(By.xpath(".//*[@id='txtpwd']")).sendKeys(prop.getProperty("password"));
+        driver.findElement(By.xpath(".//*[@id='txtemailid']")).sendKeys(prop.getProperty("username"));
+        driver.findElement(By.xpath(".//*[@id='txtpwd']")).sendKeys(prop.getProperty("passwords"));
         driver.findElement(By.xpath(".//*[@id='btnSubmit']")).click();
         Thread.sleep(1000);
      driver.findElement(By.xpath(".//*[@id='LeftMenu11']/div/img")).click();
