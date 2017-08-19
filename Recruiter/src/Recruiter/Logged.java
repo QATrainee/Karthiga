@@ -16,7 +16,6 @@ import org.openqa.selenium.support.ui.Select;
 
 public class Logged {
 	static WebDriver driver;
-	
 	public String workingDir;
 	
 	protected static WebElement xp(String xpath) {
@@ -119,8 +118,7 @@ public class Logged {
         
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         id(prop.getProperty("fetched")).click();
-        
-        driver.findElement(By.id("btnAdvancedSearch")).click();
+     
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         }
         
@@ -132,7 +130,6 @@ public class Logged {
     		prop.load(fileInput);
         driver.switchTo().defaultContent();
         xp(prop.getProperty("logout")).click();
-        driver.findElement(By.xpath(".//*[@id='LogoutMTLTaskName']")).click();
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
      driver.close(); 
     
