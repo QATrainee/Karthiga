@@ -88,7 +88,7 @@ public class Logged {
         id(prop.getProperty("preferedEmployment1")).click();
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         new Select(id(prop.getProperty("area"))).selectByVisibleText("Java, J2EE");
-        new Select(id(prop.getProperty("skill"))).selectByVisibleText("Java Server Side");
+        new Select(id(prop.getProperty("skill"))).selectByVisibleText("Java Front End");
         id(prop.getProperty("advancedSearch")).click();
         Thread.sleep(1000);
         xp(prop.getProperty("domain1")).click();
@@ -112,16 +112,17 @@ public class Logged {
 		new Select(id(prop.getProperty("year3"))).selectByVisibleText("4");
 	
 		xp(prop.getProperty("save")).sendKeys(prop.getProperty("fetching"));
-	
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-        new Select(id(prop.getProperty("days"))).selectByVisibleText("90 Days");
-        
+        new Select(id(prop.getProperty("days"))).selectByVisibleText("All");
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         id(prop.getProperty("fetched")).click();
-     
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-        }
+        driver.switchTo().defaultContent();
+       Thread.sleep(4000);
+        xp(prop.getProperty("loggggggg")).click();
+        Thread.sleep(4000);
+        xp(prop.getProperty("logggggggoooo")).click();
         
+        }
         void logout() throws InterruptedException, IOException {
         	File file = new File(workingDir + "\\Resources\\rec.properties");
     		FileInputStream fileInput;
