@@ -25,7 +25,7 @@ public class SubClass extends BaseClass {
 		 */
 		Properties prop;
 		FileInputStream fileInput = new FileInputStream(
-				"D:\\Sys1\\workspace\\Final.automation\\src\\finalTest\\Upload.properties");
+				"E:\\GitHub\\Final.automation\\src\\finalTest\\Upload.properties");
 		prop = new Properties();
 		prop.load(fileInput);
 		driver.switchTo().defaultContent();
@@ -62,7 +62,7 @@ public class SubClass extends BaseClass {
 		 * @author Arun Sakthi work name : profile
 		 */
 
-		File file = new File("D:\\Sys1\\workspace\\Final.automation\\src\\finalTest\\Profile.properties");
+		File file = new File("E:\\GitHub\\Final.automation\\src\\finalTest\\Profile.properties");
 		FileInputStream fileInput;
 		fileInput = new FileInputStream(file);
 		Properties prop = new Properties();
@@ -129,7 +129,7 @@ public class SubClass extends BaseClass {
 		 */
 		// driver.switchTo().defaultContent();
 		// driver.switchTo().frame("contentframe");
-		File file = new File("D:\\Sys1\\workspace\\Final.automation\\src\\finalTest\\Update.properties");
+		File file = new File("E:\\GitHub\\Final.automation\\src\\finalTest\\Update.properties");
 		FileInputStream fileInput;
 		fileInput = new FileInputStream(file);
 		Properties prop = new Properties();
@@ -403,7 +403,7 @@ public class SubClass extends BaseClass {
 	}
 
 	public void listing() throws Exception {
-		File file = new File("D:\\Sys1\\workspace\\Final.automation\\src\\finalTest\\Listing.properties");
+		File file = new File("E:\\GitHub\\Final.automation\\src\\finalTest\\Listing.properties");
 		FileInputStream fileInput;
 		fileInput = new FileInputStream(file);
 		Properties prop = new Properties();
@@ -449,7 +449,7 @@ public class SubClass extends BaseClass {
 	}
 
 	public void feature() throws InterruptedException, IOException {
-		File file = new File("D:\\Sys1\\workspace\\Final.automation\\src\\finalTest\\Feature.properties");
+		File file = new File("E:\\GitHub\\Final.automation\\src\\finalTest\\Feature.properties");
 		FileInputStream fileInput;
 		fileInput = new FileInputStream(file);
 		Properties prop = new Properties();

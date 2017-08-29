@@ -41,21 +41,19 @@ public class BaseClass {
 	}
 
 	void logIn() throws Exception {
-		File file = new File("D:\\Sys1\\workspace\\Final.automation\\src\\finalTest\\Base.properties");
+		File file = new File("E:\\GitHub\\Final.automation\\src\\finalTest\\Base.properties");
 		FileInputStream fileInput;
 		fileInput = new FileInputStream(file);
 		Properties prop = new Properties();
 		prop.load(fileInput);
 
-		  FileInputStream fsIP= new FileInputStream(new File("D:\\Sys1\\workspace\\Final.automation\\src\\finalTest\\data.xlsx"));
+		  FileInputStream fsIP= new FileInputStream(new File("E:\\GitHub\\Final.automation\\src\\finalTest\\data.xlsx"));
 	        XSSFWorkbook wb = new XSSFWorkbook(fsIP);
 	        XSSFSheet worksheet = wb.getSheetAt(0);           
 	        Cell cell ;
 	        XSSFCell cell1= null;
 	        
 	        for (int i = 0; i<=4;i++) {
-	        	
-	        
 		driver.get(prop.getProperty("URL"));
 		log.info("Opening Techfetch webiste");
 		
@@ -104,7 +102,7 @@ public class BaseClass {
 	        		cell1.setCellValue("Login Fail");
 	        		fsIP.close();    
                     FileOutputStream output_file1 = new FileOutputStream(
-                            new File("D:\\Sys1\\workspace\\Final.automation\\src\\finalTest\\data.xlsx"));
+                            new File("E:\\GitHub\\Final.automation\\src\\finalTest\\data.xlsx"));
                     wb.write(output_file1);
                     output_file1.close();
 	        		
@@ -116,7 +114,7 @@ public class BaseClass {
 	                cell1.setCellValue("Login pass,,,");
 	                fsIP.close();
 	                FileOutputStream output_file1 = new FileOutputStream(new File(
-	                        "D:\\Sys1\\workspace\\Final.automation\\src\\finalTest\\data.xlsx"));
+	                        "E:\\GitHub\\Final.automation\\src\\finalTest\\data.xlsx"));
 	                wb.write(output_file1);
 	                output_file1.close();
 	                driver.findElement(By.xpath(prop.getProperty("usersetting"))).click();
@@ -141,7 +139,7 @@ public class BaseClass {
 		driver.switchTo().defaultContent();
 
 		Thread.sleep(10000);
-		File file = new File("D:\\Sys1\\workspace\\Final.automation\\src\\finalTest\\Base.properties");
+		File file = new File("E:\\GitHub\\Final.automation\\src\\finalTest\\Base.properties");
 		FileInputStream fileInput;
 		fileInput = new FileInputStream(file);
 		Properties prop = new Properties();
